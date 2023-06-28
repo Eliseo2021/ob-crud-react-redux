@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Todo = ({ onClick, onDeleteTodo, completed, text, id }) => {
     return (
-        <li onClick={onClick} 
+        <li 
         style={
             {
                 textDecoration: completed ? 'line-through': 'none',
@@ -11,7 +11,9 @@ const Todo = ({ onClick, onDeleteTodo, completed, text, id }) => {
                 color: completed ? 'green' : 'white'  
             } 
         }>
+        <span onClick={onClick}>
             {id} - {text}
+        </span>
             <button onClick={onDeleteTodo} style={{ background: 'tomato', color: 'white' }}>Delete</button>
         </li>
     );
