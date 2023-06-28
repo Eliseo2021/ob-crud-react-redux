@@ -61,7 +61,9 @@ export const setVisibilityFilter = (filter) => {
 export const deleteTodo = (id) => {
     return {
         type: DELETE_TODO,
-        payload: id
+        payload: {
+            id
+        }
     }
 }
 
